@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    height: 150px;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px;
+    background-color: #2c2c2c;
+    color: white;
+    position: relative;
+}
+
+/*BARRA DEBAJO DEL TITULO */
+.barra {
+    display: flex;
+    align-items: center;
+    width: 70vw;
+    height: 2px;
+    position: relative;
+}
+.circulo {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: white;
+} 
+.izquierdo {
+    margin-right: 0;
+} 
+.derecho {
+    margin-left: 0;
+}
+.linea {
+    flex-grow: 1;
+    height: 3px;
+    background-color: white;
+}
+
+/*LOGO DE LA PAGINA */
+.logo-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start; /* Mantiene el logo a la izquierda */
+}
+.logo-img {
+    width: 110px; /* Ajusta el tamaño del logo */
+    height: 110px;
+    margin-right: 90px;
+    margin-bottom: -25px;
+}
+
+/*TITULO DE LA PAGINA*/
+.title-center {
+    font-size: 36px;
+    text-align: center; 
+    flex: 1;
+    margin: 0 20px;
+    align-items: center;
+    padding-top: 5px;
+}
+
+/*MENU DE NAVEGACION*/
+.nav-container{
+    display: flex;
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.fa-solid{ /*lupa*/
+    margin-left: 130px;
+}
+.arrow-down .fa-solid{
+    margin-left: 0;
+}
+nav ul div .busqueda{ /*linea*/
+    width: 150px;
+    flex-grow: 1;
+    height: 2px;
+    background-color: white;
+}
+
+/*BOTONES DE INICIO DE SESION Y REGISTRO */
+.buttons {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    flex-direction: column; 
+    align-items: flex-end; 
+    gap: 10px; 
+    margin-top: 10px; 
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
+}
+
+.buttons .login,
+.buttons .signup {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 120px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.buttons .login {
+    background-color: #FFFD82;
+    color: #000;
+}
+
+.buttons .signup {
+    background-color: #007EA7;
+    color: white;
+}
+
+/*SECCION1*/
+.primera{/*COLOR DEL FONDO*/
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+    background-color: #ED254E;
+}
+
+.fondo-container img{/*imagen de fondo*/
+    display: flex;
+    width: 900px;
+    height: 570px;
+    justify-content: center;
+    margin-top: 90px;
+    position: relative;
+    
+}
+
+/* círculos */
+.circle {
+    width: 320px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 50%; /* Hace que el elemento sea un círculo */
+    position: absolute;
+    bottom: 0; /* Asegura que el círculo esté en la parte inferior */
+}
+
+/* Círculo de la izquierda */
+.left-circle-1 {
+    left: 0; /* Coloca el círculo en la esquina inferior izquierda */
+    transform: translate(-30%, 70%); /* Ajuste opcional para mejor alineación */
+}
+.left-circle-3 {
+    left: 0; /* Coloca el círculo en la esquina inferior izquierda */
+    transform: translate(35%, 95%); /* Ajuste opcional para mejor alineación */
+}
+
+/* Círculo de la derecha */
+.right-circle-2 {
+    right: 0; /* Coloca el círculo en la esquina inferior derecha */
+    transform: translate(30%, 70%); /* Ajuste opcional para mejor alineación */
+}
+.right-circle-4 {
+    right: 0; /* Coloca el círculo en la esquina inferior derecha */
+    transform: translate(-35%, 95%); /* Ajuste opcional para mejor alineación */
+}
+/*SECCION2*/
+.segunda{/*COLOR DEL FONDO*/
+    position: relative;
+    height: 160vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 0 20px;
+    background-color: #ffffff;
+    margin-top: 90px;
+}
+.fondo{/*fondo*/
+    display: flex;
+    width: 1080px;
+    height: 720px;
+    justify-content: center;
+    margin-top: 90px;
+}
+/*SECCION3*/
+.tercero{/*COLOR DEL FONDO*/
+    position: relative;
+    height: 240vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 0 20px;
+    background: linear-gradient( #FF6383 0%,#FF214E 37%,#720026 100%);
+    margin-top: 0;
+}
+.fondo-3{/*fondo*/
+    display: flex;
+    width: 1080px;
+    height: 720px;
+    justify-content: center;
+ 
+}
+
+/*SECCION4*/
+.cuarto{/*COLOR DEL FONDO*/
+    position: relative;
+    height: 240vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 0 20px;
+    background-color: #ffffff;
+    margin-top: 0;
+}
+.fondo-4{/*fondo*/
+    display: flex;
+    width: 1080px;
+    height: 720px;
+    justify-content: center;
+ 
+}
