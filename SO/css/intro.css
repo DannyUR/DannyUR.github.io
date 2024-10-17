@@ -1,0 +1,172 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Estilo del encabezado */
+header {
+    background-color: #007ACC;
+    color: rgb(255, 255, 255);
+    padding: 20px 0;
+    text-align: center;
+   
+}
+
+header h1 a{
+    margin: 0;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #f4f4f9;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo de las secciones (Estructura)*/
+section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.os-section img {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    border-radius: 10px;
+    width: 350px;
+    height: 200px;
+}
+
+
+.os-section p {
+    text-align: justify;
+}
+
+
+/* Final de la pagina*/
+footer {
+    background-color: #102431;
+    color: white;
+    padding: 20px ;
+    text-align: center;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    bottom: 0;
+
+} 
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex-basis: 22%;
+    margin: 10px;
+  }
+  
+  .footer-section h3 {
+    border-bottom: 2px solid #131466;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section p {
+    line-height: 1.8;
+  }
+  
+  .footer-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-section.social a {
+    margin-right: 10px;
+  }
+  
+  .footer-section.social img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c5475;
+    font-size: 14px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+  }
+  .footer-bottom p a{
+    text-align: center;
+    color: #ffffff; 
+  }
+
+  
+
+
+
+  /*Para que se ajuste a la pantalla*/
+  @media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}

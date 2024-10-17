@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+/*ENCABEZADO*/
+header {
+    background-color: #007ACC;
+    color: rgb(0, 0, 0);
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+}
+header{
+    position: relative;
+    background-image: url(./binary.png);
+    background-size: cover;
+    background-position: center;
+    height: 25vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+header::before {
+    content: ""; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.315); 
+    z-index: 1;
+}
+
+header h1 {
+    position: relative; 
+    z-index: 1; 
+    font-size: 3.5em;
+    color: #000000;
+    
+}
+
+/*ESTRUCTURA*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sistema-operativo {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.sistema-operativo h2 a{
+    font-size: 1.2em;
+    color: #444;
+}
+
+.sistema-operativo img {
+    width: 200px;
+    height: 150px;
+    margin: 10px 0;
+}
+
+.sistema-operativo p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.info-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.info-btn:hover {
+    background-color: #0056b3;
+}
+
+.extra-info {
+    display: none;
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.9em;
+}
+/*FINAL*/
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}

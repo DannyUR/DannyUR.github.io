@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informativa de Sistemas Operativos</title>
+    <link rel="stylesheet" href="./css/intro.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="./index.html">Sistemas Operativos</a></h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Introducción</a></li>
+                <li><a href="./unidad1.html">Unidad 1</a></li>
+                <li><a href="./unidad2.html">Unidad 2</a></li>
+                <li><a href="#Proximamente...">Proximamente...</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="unidad1">
+        <h2>Unidad 2: Administración de Procesos y del procesador</h2>
+        <p>Temario:</p>
+        <p><a href="#Concepto">2.1. Concepto de proceso</a></p>
+        <p><a href="#BCP">2.1.1. Bloque de control de proceso (BCP)</a></p>
+        <p><a href="#Estados">2.2. Estados y Transiciones de los procesos</a></p>
+        <p><a href="#Procesos">2.3. Procesos ligeros: Hilos o hebras</a></p>
+        <p><a href="#SP">2.4. Sincronización entre procesos</a></p>
+        <p><a href="#Concurrencia">2.5. Concurrencia y secuenciabilidad</a></p>
+        <p><a href="#Niveles">2.6. Niveles, objetivos y criterios de planificación</a></p>
+        <p><a href="#Técnicas">2.7. Técnicas de administración del planificador</a></p> 
+        <p><a href="#Semáforo">2.8. Semáforo</a></p>
+        <p><a href="#Glosario">2.9. Glosario de la unidad 2</a></p>  
+    
+    </section>
+
+    <section id="Concepto" class="os-section">
+        <h2>2.1. Concepto</h2>
+        <img src="./img/cproceso.png" alt="imagenxd">
+        <p>Un proceso es un programa en ejecución. Es una instancia de un programa que está siendo ejecutado, y puede incluir el código del programa, su estado actual, los valores de las variables y otros recursos que utiliza.</p>
+        <br>
+        <p>Cada proceso tiene asociado un conjunto de recursos como la CPU, memoria, dispositivos de entrada/salida y archivos. En un sistema operativo, los procesos permiten la ejecución de múltiples tareas de forma simultánea (o seudoparalela mediante la multitarea).</p>
+    </section>
+
+    <section id="BCP" class="os-section">
+        <h2>2.1.1. Bloque de control de proceso (BCP)</h2>
+        <img src="./img/bcp.jpg" alt="imagenxd">
+        <p>El BCP (PCB, Process Control Block) es una estructura de datos utilizada por el sistema operativo para almacenar toda la información relacionada con un proceso particular. Esencialmente, es el "perfil" del proceso.</p>
+        <p>El BCP contiene:
+            <ul>
+                <li>Identificador de proceso (PID).</li>
+                <li>Estado del proceso (ejecución, bloqueado, etc.).</li>
+                <li>Contador de programa (dirección de la siguiente instrucción a ejecutar).</li>
+                <li>Registro de la CPU (valores actuales de los registros del procesador).</li>
+                <li>Información de memoria (ubicación de los segmentos de código, datos y pila).</li>
+                <li>Información de I/O (dispositivos que el proceso está utilizando).</li>
+                <li>Información de prioridades y permisos.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section id="Estados" class="os-section">
+        <h2>2.2. Estados y Transiciones de los procesos</h2>
+        <img src="./img/estados.png" alt="imagenxd">
+        <p>Un proceso puede pasar por varios estados durante su ciclo de vida. Los estados básicos son:</p>
+        <ul>
+            <li>Nuevo: El proceso ha sido creado pero aún no está listo para ejecutarse.</li>
+            <br>
+            <li>Listo: El proceso está en espera para ser ejecutado por la CPU.</li>
+            <br>
+            <li>Ejecución: El proceso está utilizando la CPU.</li>
+            <br>
+            <li>Bloqueado (espera): El proceso está esperando un evento externo (como la finalización de una operación de I/O).</li>
+            <br>
+            <li>Terminado: El proceso ha terminado su ejecución.</li>
+        </ul>
+        <p>Las transiciones entre estados son los cambios que puede experimentar un proceso a lo largo de su ejecución:</p>
+        <ul>
+            <li>Nuevo a Listo: Cuando un proceso ha sido creado y está listo para ser ejecutado.</li>
+                <ul> - El proceso ha sido cargado en la memoria y está esperando a ser ejecutado.</ul>
+            <li>Listo a Ejecución: Ocurre cuando el planificador de procesos (scheduler) selecciona un proceso para ejecutarse y le asigna la CPU.</li>
+                <ul> - El sistema operativo selecciona al proceso para ejecutarse en la CPU.</ul>
+            <li>Ejecución a Bloqueado: Cuando un proceso necesita esperar a que ocurra un evento externo (como una operación de entrada/salida), se bloquea.</li>
+                <ul> - El proceso no puede continuar hasta que ocurra un evento externo (por ejemplo, entrada de datos del usuario o finalización de una lectura de disco).</ul>
+            <li>Bloqueado a Listo: Ocurre cuando el evento que el proceso estaba esperando se completa, lo que lo pone en espera para ejecutarse nuevamente.</li>
+                <ul> - El evento esperado por el proceso ha ocurrido, por lo que puede reanudar la ejecución.</ul>
+            <li>Ejecución a Listo: Cuando un proceso en ejecución es interrumpido (por ejemplo, por un cambio de contexto o preemisión), regresa al estado listo.</li>
+                <ul> - Ocurre cuando el sistema operativo decide suspender temporalmente el proceso en ejecución para dar paso a otro proceso (ejemplo: un proceso de mayor prioridad).</ul>
+            <li>Ejecución a Terminado: Cuando un proceso finaliza su ejecución, ya sea porque ha terminado sus tareas o porque se le ha ordenado finalizar.</li>
+                <ul> - El proceso ha finalizado su ejecución.</ul>
+        </ul>
+    </section>
+
+    <section id="Procesos" class="os-section">
+        <h2>2.3. Procesos ligeros: Hilos o hebras</h2>
+        <img src="./img/hilos.png" alt="imagenxd">
+        <p>Un hilo es una unidad más pequeña de ejecución dentro de un proceso. Un proceso puede tener uno o varios hilos, lo que permite la ejecución concurrente dentro del mismo proceso. Los hilos comparten el mismo espacio de direcciones de memoria, pero tienen su propio contador de programa y conjunto de registros.</p>
+        <br>
+        <p>Los hilos permiten realizar múltiples tareas dentro de un mismo proceso, lo que mejora la eficiencia y la respuesta del sistema, ya que diferentes partes de un proceso pueden ejecutarse al mismo tiempo.</p>
+        <ul>
+            <p>Ventajas de los hilos sobre los procesos:</p>
+            <li>Menor sobrecarga: los hilos consumen menos recursos del sistema, ya que no requieren un cambio de contexto completo como los procesos.</li>
+            <li>Ejecución concurrente: permiten que diferentes partes de un programa se ejecuten al mismo tiempo, aprovechando mejor la capacidad de procesamiento de los sistemas multinúcleo.</li>
+            <br>
+            <p>Existen dos tipos principales:</p>
+            <li>Hilos del kernel: Administrados directamente por el sistema operativo.</li>
+            <li>Hilos del usuario: Administrados por una biblioteca en el espacio del usuario.</li>
+        </ul>
+    </section>
+
+    <section id="SP" class="os-section">
+        <h2>2.4. Sincronización entre procesos</h2>
+        <img src="./img/sincronizacion.jpg" alt="imagenxd">
+        <p>La sincronización entre procesos es crucial para evitar condiciones de carrera y garantizar que los procesos que acceden a recursos compartidos lo hagan de manera segura. El sistema operativo proporciona mecanismos de sincronización para coordinar la ejecución de los procesos que comparten recursos.</p>
+        <p>
+            Algunos mecanismos de sincronización son:
+            <ul>
+                <li>Exclusión mutua: Asegura que solo un proceso pueda acceder a un recurso compartido a la vez.</li>
+                <li>Bloqueo (mutex): Un objeto que permite la exclusión mutua, controlando el acceso a un recurso compartido.</li>
+                <li>Variables de condición: Permiten que un proceso espere hasta que otra parte del programa cumpla con una condición específica.</li>
+            </ul>
+        </p>
+    </section>
+
+    <section id="Concurrencia" class="os-section">
+        <h2>2.5. Concurrencia y secuenciabilidad</h2>
+        <img src="./img/concurrencia.jpg" alt="imagenxd">
+        <ul>
+            <li>Concurrencia: la capacidad de un sistema para ejecutar múltiples procesos o hilos en el mismo periodo de tiempo, aunque no necesariamente de manera simultánea. La concurrencia permite manejar múltiples tareas de manera eficiente, particularmente en sistemas donde los recursos son limitados.</li>
+            <br>
+            <li>Secuencialidad: es cuando las tareas se ejecutan una tras otra, de manera que una debe completarse antes de que la siguiente pueda comenzar. Es un enfoque simple, pero no aprovecha el paralelismo disponible en sistemas modernos.</li>
+        </ul>
+    </section>
+
+    <section id="Niveles" class="os-section">
+        <h2>2.6. Niveles, objetivos y criterios de planificación</h2>
+        <img src="./img/niveles.jpg" alt="imagenxd">
+        <p>La planificación de procesos se refiere a cómo el sistema operativo decide qué proceso o hilo debe ejecutarse en un momento dado.</p>
+        <ul>
+            <p>Niveles de planificación:</p>
+            <li>Planificación a largo plazo: decide qué procesos serán admitidos en el sistema y cuándo.</li>
+            <li>Planificación a medio plazo: maneja la transición entre la memoria principal y la secundaria.</li>
+            <li>Planificación a corto plazo: decide qué proceso en estado "listo" debe pasar a la CPU.</li>
+            <br>
+            <p>Objetivos de la planificación:</p>
+            <li>Maximización de la eficiencia: asegurar que los recursos del sistema se utilicen de la mejor manera posible.</li>
+            <li>Minimización del tiempo de espera y respuesta: reducir el tiempo que los procesos pasan esperando y mejorar la respuesta del sistema.</li>
+            <br>
+            <p>Criterios de planificación:</p>
+            <li>Primero en llegar, primero en ser atendido (FCFS): los procesos se ejecutan en el orden en que llegan.</li>
+            <li>Planificación por prioridades: los procesos se ejecutan en función de una prioridad asignada.</li>
+            <li>Round-Robin: se asigna una cantidad fija de tiempo a cada proceso en cola.</li>
+        </ul>
+    </section>
+
+    <section id="Técnicas" class="os-section">
+        <h2>2.7. Técnicas de administración del planificador</h2>
+        <img src="./img/tecnicas.png" alt="imagenxd">
+        <p>Existen varias técnicas de administración del planificador que permiten determinar el orden en el que los procesos serán ejecutados. Algunos de los algoritmos más comunes incluyen:</p>
+        <ul>
+            <li>FIFO (First-In, First-Out): Es el algoritmo más simple. Los procesos son atendidos en el orden en que llegan a la cola de listos. El primer proceso en entrar es el primero en salir.</li>
+            <p>Ventajas:</p>
+                <ul> - Fácil de implementar y entender. No requiere información adicional sobre los procesos.</ul>
+            <p>Desventajas:</p>
+                <ul> - Puede provocar tiempos de espera prolongados, especialmente si un proceso largo llega antes que otros más cortos (efecto "convoy").</ul>    
+            <li>Round Robin: Cada proceso recibe un intervalo de tiempo fijo (quantum) para ejecutarse. Si un proceso no termina en su quantum, se pone al final de la cola y se asigna la CPU al siguiente proceso.</li>
+            <p>Ventajas:</p>
+                <ul> - Justo para todos los procesos y mantiene un buen tiempo de respuesta para los sistemas interactivos.</ul>
+            <p>Desventajas:</p>
+                <ul> - Si el quantum es demasiado pequeño, puede resultar en una alta sobrecarga de contexto y un bajo rendimiento general.</ul>
+            <li>SJF (Shortest Job First): Este algoritmo selecciona el proceso con el tiempo de ejecución más corto para ser ejecutado primero. Puede ser preemptivo (interrumpiendo un proceso en ejecución si llega uno más corto) o no preemptivo.</li>
+            <p>Ventajas:</p>
+                <ul> - Minimiza el tiempo medio de espera y el tiempo de retorno.</ul>
+            <p>Desventajas:</p>
+                <ul> - Dificultad para estimar el tiempo de ejecución. Puede llevar a la inanición de procesos más largos (starvation).</ul>
+            <li>Planificación con prioridad: Cada proceso tiene una prioridad asignada. El planificador selecciona el proceso con la prioridad más alta para ejecutar. Puede ser preemptivo o no preemptivo.</li>
+            <p>Ventajas:</p>
+                <ul> - Permite a los procesos críticos ser atendidos primero.</ul>
+            <p>Desventajas:</p>
+                <ul> - La asignación de prioridades puede ser complicada y, al igual que en SJF, puede causar inanición de procesos de baja prioridad</ul>
+        </ul>
+        <p>Para más detalles puedes consultar el siguiente mapa conceptual:</p>
+        <p><a href="https://drive.google.com/file/d/1WKQ_dzAi814eKVb9chmOQpEHIlPWzRwQ/view?usp=sharing">Mapa conceptual</a></p>
+    </section>
+
+    <section id="Semáforo" class="os-section">
+        <h2>2.8. Semáforo</h2>
+        <img src="./img/semaforo.jpg" alt="imagenxd">
+        <p>Un semáforo es una estructura de sincronización que controla el acceso de los procesos a los recursos compartidos. Se pueden clasificar en dos tipos:
+            <ul>
+                <li>Semáforo binario: Solo tiene dos valores, 0 y 1. Es útil para implementar exclusión mutua.</li>
+                <li>Semáforo de conteo: Permite contar hasta un número máximo, lo que lo hace útil cuando varios procesos pueden acceder a un recurso compartido al mismo tiempo.</li>
+            </ul>
+            <p>Los semáforos utilizan las operaciones wait (P) y signal (V) para gestionar los permisos de acceso de los procesos:</p>
+            <li>wait(P): Disminuye el valor del semáforo. Si el valor es menor o igual a cero, el proceso se bloquea.</li>
+            <li>signal(V): Incrementa el valor del semáforo. Si hay procesos bloqueados, uno de ellos se despierta.</li>
+            </p>
+    </section>
+
+    <section id="Glosario" class="os-section">
+        <h2>2.9. Glosario de la unidad 2</h2>
+        <img src="./img/glosario.jpg" alt="imagenxd">
+        <ul>
+            <li>Proceso: Programa en ejecución que incluye el código, los datos y el estado necesario para su ejecución, gestionado por el sistema operativo.</li>
+            <br>
+            <li>Estado del proceso: Fase en la que se encuentra un proceso, como nuevo, listo, ejecutando, bloqueado o terminado.</li>
+            <br>
+            <li>Transición de proceso: Cambios entre los diferentes estados de un proceso, como pasar de "listo" a "ejecutando" o de "bloqueado" a "listo".</li>
+            <br>
+            <li>Hilo (Thread): Unidad mínima de ejecución dentro de un proceso. Varios hilos pueden coexistir dentro de un mismo proceso, compartiendo recursos.</li>
+            <br>
+            <li>Hilo ligero: Término que hace referencia a los hilos (threads), ya que son más "ligeros" en términos de uso de recursos que los procesos completos.</li>
+            <br>
+            <li>Concurrencia: Capacidad de un sistema para ejecutar múltiples procesos o hilos simultáneamente, o alternando de manera rápida entre ellos.</li>
+            <br>
+            <li>Secuencialidad: Ejecución de tareas de forma secuencial, una después de la otra, sin solapamiento.</li>
+            <br>
+            <li>Planificación (Scheduling): Mecanismo por el cual el sistema operativo decide el orden y el tiempo que un proceso o hilo pasa en la CPU.</li>
+            <br>
+            <li>Planificación FIFO (First-In, First-Out): Algoritmo de planificación donde el primer proceso en llegar es el primero en ejecutarse.</li>
+            <br>
+            <li>Planificación Round Robin: Algoritmo de planificación que asigna un intervalo de tiempo (quantum) fijo a cada proceso, alternándolos en un ciclo.</li>
+            <br>
+            <li>Planificación SJF (Shortest Job First): Algoritmo de planificación que prioriza los procesos con el tiempo de ejecución más corto.</li>
+            <br>
+            <li>Planificación por prioridad: Técnica en la que cada proceso tiene asignada una prioridad, ejecutándose primero aquellos con prioridad más alta.</li>
+            <br>
+            <li>Quantum: Unidad de tiempo en la planificación de Round Robin que define cuánto tiempo un proceso puede ejecutar antes de ser interrumpido.</li>
+            <br>
+            <li>Preemptivo: Tipo de planificación en el que un proceso en ejecución puede ser interrumpido para darle paso a otro proceso más prioritario.</li>
+            <br>
+            <li>No preemptivo: Tipo de planificación donde los procesos no son interrumpidos hasta que terminen su ejecución o entren en un estado de espera.</li>
+            <br>
+            <li>Colas múltiples (Multilevel Queue): Técnica de planificación en la que los procesos se agrupan en diferentes colas, cada una con su propio algoritmo de planificación.</li>
+            <br>
+            <li>Colas de retroalimentación múltiple (Multilevel Feedback Queue): Variante de colas múltiples que permite que los procesos cambien de cola según su comportamiento (por ejemplo, si consumen más tiempo de CPU del esperado).</li>
+            <br>
+            <li>Inanición (Starvation): Situación donde un proceso no recibe recursos (como tiempo de CPU) por un largo período debido a la priorización de otros procesos.</li>
+            <br>
+            <li>Tiempo de espera (Waiting Time): Tiempo total que un proceso pasa esperando en la cola de listos antes de ser ejecutado.</li>
+            <br>
+            <li>Tiempo de retorno (Turnaround Time): Tiempo total desde que un proceso es admitido en el sistema hasta que finaliza su ejecución.</li>
+            <br>
+            <li>Multiprogramación: Técnica en la que varios procesos se cargan en la memoria para ser ejecutados, permitiendo la concurrencia de varios programas en un sistema.</li>
+            <br>
+            <li>CPU: Unidad central de procesamiento, componente del sistema que ejecuta instrucciones de los procesos.</li>
+            <br>
+            <li>Contexto de proceso: Conjunto de información (valores de los registros, contador de programa, etc.) que define el estado actual de un proceso cuando se suspende o cambia de estado.</li>
+            <br>
+            <li>Cambio de contexto (Context Switch): Proceso por el cual el sistema operativo guarda el estado de un proceso y carga el estado de otro, para que este último pueda ejecutarse.</li>
+            <br>
+            <li>Sistemas en tiempo real: Sistemas donde las tareas deben completarse dentro de plazos estrictos. Usan planificación con restricciones de tiempo para garantizar el cumplimiento de los plazos.</li>
+        </ul>
+    </section>
+
+    <footer id="adornoxd">
+        <div class="footer-container">
+            <div class="footer-section about">
+              <h3>Sobre Este Sitio</h3>
+              <p>Esta página está dedicada para brindar información detallada sobre la materia de sistemas operativos.</p>
+            </div>
+            
+            <div class="footer-section links">
+              <h3>Enlaces Útiles</h3>
+              <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./unidad1.html">Unidad1</a></li>
+                <li><a href="./unidad2.html">Unidad2</a></li>
+                <li><a href="#Proximamente">Proximamente</a></li>
+              </ul>
+            </div>
+            
+            <div class="footer-section contact">
+              <h3>Contacto</h3>
+              <p>Email: info@sistemasoperativos.com</p>
+              <p>Teléfono: +123 456 789</p>
+            </div>
+            
+            <div class="footer-section social">
+              <h3>Redes Sociales</h3>
+              <a href=""><img src="./img/facebooklogo.png"></a>
+              <a href=""><img src="./img/twitterlogo.png"></a>
+              <a href=""><img src="./img/instagramlogo.png"></a>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy; 2024 Sistemas Operativos | Todos los derechos reservados | Términos y condiciones | Política de privacidad </p>
+          </div>
+    </footer>
+</body>
+</html>
+
