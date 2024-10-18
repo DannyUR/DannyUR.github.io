@@ -263,10 +263,13 @@ nav ul div .busqueda{ /*linea*/
   }
   
   .destacados-section h2 {
-    font-size: 28px;
+    width: 40px;
+    height: 50px;
+    font-size: 32px;
     margin-bottom: 20px;
     font-weight: bold;
     color: #333;
+    margin-top: -100px;
   }
   
   .grid-container {
