@@ -135,7 +135,7 @@ nav ul div .busqueda{ /*linea*/
 }
 
 .buttons .signup {
-    background-color: #007EA7;
+    background-color: #3ed0ff;
     color: white;
 }
 
@@ -152,15 +152,57 @@ nav ul div .busqueda{ /*linea*/
     background-color: #ED254E;
 }
 
-.fondo-container img{/*imagen de fondo*/
+
+.fondo-container {/*imagen de fondo*/
     display: flex;
     width: 900px;
     height: 570px;
     justify-content: center;
     margin-top: 90px;
-    position: relative;
+    
     
 }
+.titulo-boton { /*texto de la imagen*/
+    position: absolute;
+    top: 35%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    
+  }
+  
+  .titulo-boton h1 {
+    font-size: 40px;
+    margin-bottom: 125px;
+    text-shadow: 
+    -5px -5px 5px #000000, /* Sombra superior izquierda */
+    5px -5px 5px #000000,  /* Sombra superior derecha */
+    -5px 5px 5px #000000,  /* Sombra inferior izquierda */
+    5px 5px 5px #000000;   /* Sombra inferior derecha */
+  }
+  
+  .titulo-boton button { /*Boton de la imagen*/
+    padding: 10px 20px;
+    width: 400px;
+    height: 60px;
+    background-color: #ff4c4cc4;
+    border: 5px solid #ffffff;
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    border-radius: 20px;
+  }
+  
+  .titulo-boton button:hover {
+    background-color: #e73b3be0;
+    
+  }
+.fa-angles-right{ /*flecha*/
+    margin-left: 10px;
+    color: #f7f7f7;
+}
+
 
 /* círculos */
 .circle {
@@ -191,6 +233,9 @@ nav ul div .busqueda{ /*linea*/
     right: 0; /* Coloca el círculo en la esquina inferior derecha */
     transform: translate(-35%, 95%); /* Ajuste opcional para mejor alineación */
 }
+
+
+
 /*SECCION2*/
 .segunda{/*COLOR DEL FONDO*/
     position: relative;
@@ -209,8 +254,62 @@ nav ul div .busqueda{ /*linea*/
     width: 1080px;
     height: 720px;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 10px;
 }
+.destacados-section {
+    max-width: 1080px;
+    margin: 0 auto;
+
+  }
+  
+  .destacados-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .grid-container {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  /* Mínimo tamaño de las columnas */
+    gap: 30px;  /* Espacio entre los elementos */
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease; /* Animación para hover */
+  }
+  
+  .item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .item p {
+    font-size: 16px;
+    color: #0077cc;
+    font-weight: bold;
+  }
+  
+  .item:hover {
+    transform: translateY(-5px);  /* Efecto de movimiento al pasar el cursor */
+  }
+
+
+
+
+
+
+
 /*SECCION3*/
 .tercero{/*COLOR DEL FONDO*/
     position: relative;
@@ -231,6 +330,11 @@ nav ul div .busqueda{ /*linea*/
     justify-content: center;
  
 }
+
+
+
+
+
 
 /*SECCION4*/
 .cuarto{/*COLOR DEL FONDO*/
