@@ -260,16 +260,23 @@ nav ul div .busqueda{ /*linea*/
     max-width: 1080px;
     margin: 0 auto;
 
-  }
-  
+}
+.destacados-section .viñeta{
+   background-color: #FF7F51;
+   width: 30px;
+    height: 40px;
+    margin-bottom: -35px;
+    margin-top: -20px;
+}
   .destacados-section h2 {
     width: 40px;
     height: 50px;
     font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-weight: bold;
     color: #333;
-    margin-top: -100px;
+    margin-top: -20px;
+    margin-left: 40px;
   }
   
   .grid-container {
@@ -278,15 +285,19 @@ nav ul div .busqueda{ /*linea*/
     gap: 30px;  /* Espacio entre los elementos */
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-top: 50px;
+    
   }
   
-  .item {
+  .item { 
     background-color: white;
     border-radius: 15px;
     padding: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     transition: transform 0.3s ease; /* Animación para hover */
+    margin-bottom: 50px;
+    
   }
   
   .item img {
@@ -316,7 +327,7 @@ nav ul div .busqueda{ /*linea*/
 /*SECCION3*/
 .tercero{/*COLOR DEL FONDO*/
     position: relative;
-    height: 240vh;
+    height: 160vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -327,14 +338,99 @@ nav ul div .busqueda{ /*linea*/
     margin-top: 0;
 }
 .fondo-3{/*fondo*/
+   
     display: flex;
     width: 1080px;
     height: 720px;
     justify-content: center;
- 
+    
 }
 
+.container {
+    text-align: center;
+    padding: 20px;
+    
+}
+.container .curva{
+    background-image: url(./curva.png);
+    width: 100vw; /* La imagen ocupa todo el ancho de la ventana */
+    height: 150px; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina cualquier espacio en blanco adicional */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: -170px;
+    align-items: center;
+    
+    
+}
 
+ h3 {
+    width: 40px;
+    height: 50px;
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 50px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 50px;
+    
+}
+
+.category {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+    
+}
+
+.category:hover {
+    transform: translateY(-10px);
+}
+
+.category img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category .texto {
+    display: block;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background-color: #000;
+}
+.curvaA{
+    background-image: url(./curvaA.png);
+    width: 100vw; /* La imagen ocupa todo el ancho de la ventana */
+    height: 150px; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina cualquier espacio en blanco adicional */
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+    align-items: center;
+}
 
 
 
