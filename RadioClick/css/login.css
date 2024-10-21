@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url(./flogin.png);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 900px;
+    height: 550px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right {
+    flex: 1.5;
+    background-color: #ff6382de;
+    padding: 40px;
+    color: white;
+    margin-left: 450px;
+    margin-top: -20px;
+}
+
+.right h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+input[type="email"], input[type="password"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    color: #555;
+}
+
+button[type="submit"] {
+    background-color: #7B1FA2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+button[type="submit"]:hover {
+    background-color: #6a1b9a;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 14px;
+    position: relative;
+    color: white;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    width: 40%;
+    top: 50%;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.social {
+    background-color: #f4f4f4;
+    color: #555;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social:hover {
+    background-color: #e0e0e0;
+}
+
+.social.google {
+    background-color: white;
+    color: #555;
+}
+
+.social.facebook {
+    background-color: #3b5998;
+    color: white;
+}
+
+.social.twitter {
+    background-color: #1da1f2;
+    color: white;
+}
+
+.links {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #ffe0e0;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}

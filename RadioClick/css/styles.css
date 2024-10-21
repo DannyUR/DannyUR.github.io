@@ -116,9 +116,18 @@ nav ul div .busqueda{ /*linea*/
     position: absolute; 
     right: 20px; 
     top: 20px; 
+    
+}
+.buttons .login a {
+    text-decoration: none;
+    color: #000;
+}
+.buttons .signup a{
+    text-decoration: none;
+     color: #000;
 }
 
-.buttons .login,
+.buttons .login ,
 .buttons .signup {
     padding: 10px 20px;
     font-size: 18px;
@@ -127,17 +136,20 @@ nav ul div .busqueda{ /*linea*/
     width: 120px;
     flex-grow: 1;
     text-align: center;
+    
 }
 
 .buttons .login {
     background-color: #FFFD82;
-    color: #000;
 }
 
 .buttons .signup {
     background-color: #3ed0ff;
-    color: white;
 }
+
+
+
+
 
 /*SECCION1*/
 .primera{/*COLOR DEL FONDO*/
@@ -192,6 +204,10 @@ nav ul div .busqueda{ /*linea*/
     cursor: pointer;
     font-size: 30px;
     border-radius: 20px;
+  }
+  .titulo-boton button a{
+    text-decoration: none;
+    color: #fff;
   }
   
   .titulo-boton button:hover {
@@ -582,7 +598,7 @@ h4 {
 }
 
 .time {
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 16px;
     font-weight: bold;
 }
