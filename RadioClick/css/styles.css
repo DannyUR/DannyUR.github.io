@@ -359,11 +359,21 @@ nav ul div .busqueda{ /*linea*/
     background-size: cover; /* Hace que la imagen cubra todo el contenedor */
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: -170px;
+    margin-top: -150px;
     align-items: center;
+    margin-bottom: 40px;
     
     
 }
+.container .viñeta{
+    background-color: #FF7F51;
+    width: 30px;
+     height: 40px;
+     margin-bottom: 0px;
+     margin-top: -140px;
+     margin-left: 120px;
+     margin-bottom: 70px;
+ }
 
  h3 {
     width: 40px;
@@ -372,8 +382,9 @@ nav ul div .busqueda{ /*linea*/
     margin-bottom: 25px;
     font-weight: bold;
     color: #333;
-    margin-top: 20px;
-    margin-left: 150px;
+    margin-top: -105px;
+    margin-left: 160px;
+    margin-bottom: 100px;
 }
 
 .categories {
@@ -384,7 +395,7 @@ nav ul div .busqueda{ /*linea*/
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-left: 50px;
+    margin-left: 55px;
     margin-top: 50px;
     
 }
@@ -400,7 +411,7 @@ nav ul div .busqueda{ /*linea*/
     width: 200px;
     height: 200px;
     margin-bottom: 50px;
-    
+    position: relative;
 }
 
 .category:hover {
@@ -413,12 +424,21 @@ nav ul div .busqueda{ /*linea*/
     object-fit: cover;
 }
 
-.category .texto {
-    display: block;
-    padding: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-    background-color: #000;
+.category-text {
+    width: 200px;
+    height: 55px;
+    position: absolute; /* Posiciona el texto de forma absoluta dentro del contenedor */
+    top: 50%; /* Posiciona el texto verticalmente en el medio */
+    left: 50%; /* Posiciona el texto horizontalmente en el medio */
+    transform: translate(-50%, -50%); /* Asegura que el texto esté perfectamente centrado */
+    color: white; /* Cambia el color del texto a blanco */
+    font-size: 1.5em; /* Ajusta el tamaño de la fuente */
+    font-weight: bold; /* Hace el texto más grueso */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Agrega un efecto de sombra para mejorar la legibilidad sobre imágenes */
+    background-color: #000000bd; 
+}
+.category-text .centrar{
+    margin-top: 15px;
 }
 .curvaA{
     background-image: url(./curvaA.png);
@@ -428,9 +448,19 @@ nav ul div .busqueda{ /*linea*/
     background-size: cover; /* Hace que la imagen cubra todo el contenedor */
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 50px;
+    margin-top: 30px;
     align-items: center;
 }
+.verMas{
+    margin-left: 1100px;
+    margin-top: -25px;
+}
+.fa-chevron-right{
+    margin-top: 9px;
+    margin-left: 10px;
+}
+
+
 
 
 
@@ -438,7 +468,7 @@ nav ul div .busqueda{ /*linea*/
 /*SECCION4*/
 .cuarto{/*COLOR DEL FONDO*/
     position: relative;
-    height: 240vh;
+    height: 140vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -454,4 +484,177 @@ nav ul div .busqueda{ /*linea*/
     height: 720px;
     justify-content: center;
  
+}
+.container-ultimo {
+    padding-top: 350px;
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+.container-ultimo .viñeta{
+    background-color: #FF7F51;
+    width: 30px;
+     height: 40px;
+     margin-bottom: 0px;
+     margin-top: -340px;
+     margin-left: -130px;
+     margin-bottom: 0px;
+ }
+
+h4 {
+    margin-top: -35px;
+    margin-bottom: 70px;
+    margin-left: -900px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.podcasts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 70px; /* Espacio entre columnas */
+    row-gap: 30px; /* Espacio entre filas */
+    margin-left: -150px;
+    margin-right: -150px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+}
+
+.card h5 {
+    font-size: 18px;
+    margin: 10px 0;
+    
+}
+
+.card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.play-button {
+    display: flex;
+    width: 120px;
+    height: 30px;
+    align-items: center;
+    background-color: #90CAF9; /* Color de fondo del botón */
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+.circle-play {
+    width: 40px;
+    height: 40px;
+    background-color: white; /* Color de fondo del círculo */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border: 3px solid #1976D2; /* Color del borde del círculo */
+    margin-left: -30px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 10px solid #1976D2; /* Color del triángulo */
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    margin-left: 2px; /* Para centrar el triángulo */
+}
+
+.time {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.ver-mas {
+    background-color: #FF7E4A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    font-weight: bold;
+    margin-bottom: -100px;
+}
+
+.ver-mas:hover {
+    background-color: #ff571a;
+}
+
+
+
+/*FINAL*/
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 200px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+    margin-left: -1150px;
+    margin-top: 10px;
+    margin-bottom: -120px;
+}
+
+.redes-sociales {
+    margin-top: -20px;
+    margin-left: 1150px;
+}
+.redes-sociales p{
+    margin-bottom: 15px;
+}
+
+.redes-sociales a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.copyright {
+    margin-top: 50px;
+}
+
+.copyright ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.copyright li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.copyright a {
+    color: #fff;
+    text-decoration: none;
 }
