@@ -138,16 +138,27 @@ button[type="submit"]:hover {
 
 .social.google {
     background-color: white;
-    color: #555;
+    
+    
+}
+.social.google a{
+    text-decoration: none;
+    color: #000;
 }
 
 .social.facebook {
     background-color: #3b5998;
+}
+.social.facebook a{
+    text-decoration: none;
     color: white;
 }
 
 .social.twitter {
-    background-color: #1da1f2;
+    background-color: #000;
+}
+.social.twitter a{
+    text-decoration: none;
     color: white;
 }
 
@@ -157,7 +168,7 @@ button[type="submit"]:hover {
 }
 
 .links a {
-    color: #ffe0e0;
+    color: #000;
     text-decoration: none;
 }
 
