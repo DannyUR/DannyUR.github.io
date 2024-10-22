@@ -368,7 +368,7 @@ nav ul div .busqueda{ /*linea*/
     
 }
 .container .curva{
-    background-image: url(./curva.png);
+    background-image: url(./curva.webp);
     width: 100vw; /* La imagen ocupa todo el ancho de la ventana */
     height: 150px; /* Mantiene la proporción de la imagen */
     display: block; /* Elimina cualquier espacio en blanco adicional */
@@ -457,7 +457,7 @@ nav ul div .busqueda{ /*linea*/
     margin-top: 15px;
 }
 .curvaA{
-    background-image: url(./curvaA.png);
+    background-image: url(./curvaA.webp);
     width: 100vw; /* La imagen ocupa todo el ancho de la ventana */
     height: 150px; /* Mantiene la proporción de la imagen */
     display: block; /* Elimina cualquier espacio en blanco adicional */
