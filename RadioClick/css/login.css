@@ -12,6 +12,21 @@ body {
     align-items: center;
     height: 100vh;
 }
+/*LOGO DE LA PAGINA */
+.logo-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start; /* Mantiene el logo a la izquierda */
+}
+.logo-img {
+    width: 80px; /* Ajusta el tamaño del logo */
+    height: 80px;
+    margin-right: 90px;
+    margin-left: 15px;
+    margin-top: -5px;
+    border-radius: 20px;
+    
+}
 
 .container {
     display: flex;

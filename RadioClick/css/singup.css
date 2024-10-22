@@ -15,6 +15,19 @@ body {
     background-repeat: no-repeat;
     
 }
+/*LOGO DE LA PAGINA */
+.logo-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start; /* Mantiene el logo a la izquierda */
+}
+.logo-img {
+    width: 80px; /* Ajusta el tamaño del logo */
+    height: 80px;
+    margin-right: 90px;
+    margin-left: 15px;
+    margin-top: -5px;
+}
 
 .container {
     display: flex;
@@ -97,29 +110,23 @@ button[type="submit"]:hover {
     justify-content: center;
     gap: 10px;
 }
-
-.social {
-    background-color: #444;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
+.social-icons button{
+    width: 30px;
+    height: 30px;
+    border-radius:5px ;
+    
 }
-
-.social.google {
-    background-color: #ffffff;
-    color: #555;
+.social-icons button img#google{
+    width: 26px;
+    height: 26px;    
 }
-
-.social.facebook {
-    background-color: #3b5998;
-    color: white;
+.social-icons button img#facebook{
+    width: 26px;
+    height: 26px;    
 }
-
-.social.twitter {
-    background-color: #000000;
-    color: white;
+.social-icons button img#twitter{
+    width: 26px;
+    height: 26px;
+    border-radius:2px ;
+    
 }
-
