@@ -11,6 +11,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 /*LOGO DE LA PAGINA */
 .logo-container {
