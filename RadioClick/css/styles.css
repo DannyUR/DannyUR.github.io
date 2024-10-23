@@ -176,16 +176,20 @@ nav ul div .busqueda{ /*linea*/
 }
 .titulo-boton { /*texto de la imagen*/
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 42%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    width: 900px;
+    height: 350px;
     
   }
   
   .titulo-boton h1 {
     font-size: 40px;
+    margin-left: 65px;
+    margin-right: -50px;
     margin-bottom: 125px;
     text-shadow: 
     -5px -5px 5px #000000, /* Sombra superior izquierda */
