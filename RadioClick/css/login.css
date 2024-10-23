@@ -21,8 +21,8 @@ body {
     justify-content: flex-start; /* Mantiene el logo a la izquierda */
 }
 .logo-img {
-    width: 80px; /* Ajusta el tamaño del logo */
-    height: 80px;
+    width: 14vh; /* Ajusta el tamaño del logo */
+    height: 14vh;
     margin-right: 90px;
     margin-left: 15px;
     margin-top: -5px;
@@ -48,7 +48,7 @@ body {
     flex: 1.5;
     background-color: #ff6382de;
     padding: 40px;
-    color: white;
+    color: #000;
     margin-left: 450px;
     margin-top: -20px;
 }

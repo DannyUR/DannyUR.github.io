@@ -55,8 +55,8 @@ header {
     justify-content: flex-start; /* Mantiene el logo a la izquierda */
 }
 .logo-img {
-    width: 110px; /* Ajusta el tamaño del logo */
-    height: 110px;
+    width: 18vh; /* Ajusta el tamaño del logo */
+    height: 18vh;
     margin-right: 90px;
     margin-bottom: -25px;
 }
@@ -167,7 +167,7 @@ nav ul div .busqueda{ /*linea*/
 
 .fondo-container {/*imagen de fondo*/
     display: flex;
-    width: 900px;
+    width: 100%;
     height: 570px;
     justify-content: center;
     margin-top: 90px;
@@ -638,8 +638,8 @@ footer {
 }
 
 .logo img {
-    width: 150px;
-    height: auto;
+    width: 25vh;
+    height: 25vh;
     margin-left: -1150px;
     margin-top: 10px;
     margin-bottom: -120px;
