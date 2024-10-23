@@ -97,11 +97,13 @@ nav ul li a {
 .arrow-down .fa-solid{
     margin-left: 0;
 }
-nav ul div .busqueda{ /*linea*/
+nav .busqueda{ /*linea*/
     width: 150px;
     flex-grow: 1;
     height: 2px;
     background-color: white;
+    margin-top: 20px;
+    margin-left: -150px;
 }
 
 /*BOTONES DE INICIO DE SESION Y REGISTRO */
