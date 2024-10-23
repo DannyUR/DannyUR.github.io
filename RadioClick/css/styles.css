@@ -167,10 +167,10 @@ nav ul div .busqueda{ /*linea*/
 
 .fondo-container {/*imagen de fondo*/
     display: flex;
-    width: 100%;
-    height: 570px;
+    width: 100vh;
+    height: 100vh;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 120px;
     
     
 }
@@ -373,7 +373,7 @@ nav ul div .busqueda{ /*linea*/
 }
 .container .curva{
     background-image: url(./curva.webp);
-    width: 100vw; /* La imagen ocupa todo el ancho de la ventana */
+    width: 100%; /* La imagen ocupa todo el ancho de la ventana */
     height: 150px; /* Mantiene la proporción de la imagen */
     display: block; /* Elimina cualquier espacio en blanco adicional */
     background-size: cover; /* Hace que la imagen cubra todo el contenedor */
